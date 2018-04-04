@@ -11779,7 +11779,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11853,23 +11853,23 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Maximum price of the data</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Mean price of the data</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Median price of the data</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Standard deviation of prices of the data</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># Show the calculated statistics</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -11896,7 +11896,7 @@ Minimum price: $105000.0
 Maximum price: $1024800.0
 Mean price: $454342.9447852761
 Median price $438900.0
-Standard deviation of prices: $165340.27765266786
+Standard deviation of prices: $165171.13154429477
 </pre>
 </div>
 </div>
@@ -11971,7 +11971,7 @@ Standard deviation of prices: $165340.27765266786
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;r2_score&#39;</span>
@@ -12035,7 +12035,7 @@ Standard deviation of prices: $165340.27765266786
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate the performance of this model</span>
@@ -12114,7 +12114,7 @@ Standard deviation of prices: $165340.27765266786
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;train_test_split&#39;</span>
@@ -14691,9 +14691,9 @@ iIiIaGMJaxERERFtLGEtIiIioo0lrEVERES0sYS1iIiIiDb2PzrC4Oru1VW6AAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-In k-fold cross validation technique, the data is split into k equal partitions. Then, k-1 partitions are used for training the model, and 1 partition is used for testing the model. This procedure is repeated k times so that each combination has been used to train and test the model.</p>
-<p>The advantage of this method is that all the data is used for training and testing under k iterations, which helps remove the inherent local biases in data.</p>
-<p>A disadvantage of grid search without cross validation is that the grid search is done based on provided subsets of training and testing data. On using grid search with k-fold cross validation, grid search is performed along with trying all k subsets of data, which improves model performance</p>
+In k-fold cross validation technique, the training data is split into k equal partitions. Then, k-1 partitions are used for training the model, and 1 partition is used for validating the model. This procedure is repeated k times so that each combination has been used to train and validate the model.</p>
+<p>The advantage of this method is that all the data is used for training and validating under k iterations, which helps remove the inherent local biases in data.</p>
+<p>On using grid search with k-fold cross validation, grid search is performed for a particular hyperparameter, splitting data into kfolds, training the data on k-1 folds and validating on one fold.This helps us in getting an unbiased estimate of model evaluation metric which helps us decide whether the given combination of hyperparameters fits the best.</p>
 <p>The final score is the average of all scores obtained from k iterations. The final error is also the average of all errors across k runs.</p>
 
 </div>
@@ -14731,7 +14731,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
@@ -14799,7 +14799,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fit the training data to the model using grid search</span>
@@ -14887,7 +14887,7 @@ The answer is max_depth of 4 compared to guessed value of max_value of 3</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Produce a matrix for client data</span>
@@ -14927,8 +14927,7 @@ Predicted selling price for Client 3&#39;s home: $931,636.36
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>The predictions generated by the model are in line with the input parameters, making these prices reasonable.</p>
-<p>Client 3 wants a more number of rooms in a house ,in a neighborhood with best school and lowest poverty rate, hence the price of the house is highest. Client 2 wants a 4 room house in a neighborhood where poverty rate is highest and PTRATIO is worst, hence the price of the house is lowest. Client 1 has the parameters in between clients 2 and 3, and the price of the house is also between their houses' prices.</p>
+<p>The predictions generated by the model are in line with the input parameters and the descriptive summary calculated above, making these prices reasonable. The maximum median value of the data in the dataset is $1024800 with std deviation of 165171. Client 3 wants a more number of rooms in a house ,in a neighborhood with best school and lowest poverty rate, hence the price of the house is highest among the 3 clirnts but it is inline with the descriptive stats. Client 2 wants a 4 room house in a neighborhood where poverty rate is highest and PTRATIO is worst, hence the price of the house is lowest. Client 1 has the parameters in between clients 2 and 3, and the price of the house is also between their houses' prices.</p>
 
 </div>
 </div>
